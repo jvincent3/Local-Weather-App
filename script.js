@@ -23,7 +23,7 @@ function localweather(lat,lon) {
 	$('#location').append(data.main.temp+" &#176;C");
 	$('#temp').append(data.name+", "+data.sys.country);
 	$('#sky').append(data.weather[0].main);
-	$('#img').attr("src", "http://openweathermap.org/img/w/"+data.weather[0].icon +".png");
+	$('#img').attr("src", "https://openweathermap.org/img/w/"+data.weather[0].icon +".png");
 	//console.log(data.weather[0].main);
 	});
 }
