@@ -2,18 +2,21 @@
 // API GET Location
 function currentLocation() {
 
-	var URL = "http://ip-api.com/json";
+	var URL = "https://ipapi.co/json";
+
 	$.get(URL, function(data) {
-	var lat = data.lat;
-	var lon = data.lon;
-	localweather(lat, lon);
+
+		var lat = data.latitude;
+		var lon = data.longitude;
+
+		localweather(lat, lon);
 	});
 }
 
 // INTERACT WITH THE WEATHER API
 function localweather(lat,lon) {
 	var APIKEY = "f3e227a4fcd958200be8fe9d55f5ca88"
-	var APIURL = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+APIKEY+"&units=metric";
+	var APIURL = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+APIKEY+"&units=metric";
 	
 	$.get(APIURL, function(data){
 
