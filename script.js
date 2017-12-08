@@ -1,4 +1,5 @@
-
+$(document).ready(function() {
+	
 // API GET Location
 function currentLocation() {
 
@@ -30,4 +31,5 @@ function localweather(lat,lon) {
 currentLocation();
 
 
+});
 
